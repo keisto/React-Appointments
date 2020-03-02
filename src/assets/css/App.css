@@ -1,0 +1,138 @@
+/**  Add Appointments **/
+.card {
+  border-color: transparent;
+  transition: border .35s;
+}
+
+.card.add-appointment {
+  border-color: #e3e8ef;
+}
+
+.card .card-body {
+  overflow: hidden;
+  min-height: 0;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  transition: padding .5s, max-height .35s, opacity .35s .25s;
+}
+
+.card.add-appointment {
+  border-color: #e3e8ef;
+}
+
+.card.add-appointment .card-body {
+  max-height: 600px;
+  opacity: 1;
+  padding: 1.25rem;
+}
+
+.apt-addheading {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #6772e4;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.apt-addheading:hover {
+  background-color: #555abf;
+}
+
+.apt-addheading.card-header {
+  border-radius: calc(0.25rem - 1px);
+}
+
+.add-appointment .apt-addheading.card-header {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+/**  Search Appointments **/
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #f7f9fc;
+  color: #6772e4;
+}
+
+/**  List Appointments **/
+
+#avatar {
+  opacity: 0;
+  animation: fadeIn .35s .25s forwards;
+}
+
+.list-item {
+  position: relative;
+  display: flex;
+  padding: .75rem 1.5rem;
+  border-top: 1px solid #e3e8ef;
+  transition: background-color .35s;
+}
+
+.list-item:last-of-type {
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  margin-bottom: -1rem;
+}
+
+.list-item:hover {
+  background-color: #f7f9fc;
+}
+
+.list-item:before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 5px;
+  left: .5rem;
+  align-self: center;
+  border-radius: 2px;
+  background-color: #6772e4;
+  transition: height .35s;
+}
+
+.list-item:hover:before {
+  height: 44px;
+}
+
+.list-item .date {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  width: 156px;
+}
+
+.list-item:hover .date svg {
+  animation: fadeIn .35s .25s reverse forwards;
+}
+
+.list-item .delete {
+  position: absolute;
+  align-self: flex-end;
+  padding: .25rem 0;
+  opacity: 0;
+  border: none;
+}
+
+.list-item:hover .delete {
+  animation: fadeIn .35s .5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.75);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(.95);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

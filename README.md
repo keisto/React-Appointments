@@ -1,3 +1,12 @@
+# Hello World! 👋
+My name is Tony and I built this app to better understand React and what it has to offer. Watch [this course](https://www.linkedin.com/learning/react-js-building-an-interface-2) on Linkedin Learning to build an app like this.
+
+![Screenshot](https://github.com/keisto/React-Appointments/blob/master/src/assets/images/screenshot.png?raw=true)
+
+**Thanks for stopping by!**
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
